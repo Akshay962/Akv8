@@ -108,7 +108,7 @@ async def next_page(bot, query):
             ],
         )
     btn.insert(0, [
-        InlineKeyboardButton('How To Download', url='https://t.me/How_to_Open_Link_TG')
+        InlineKeyboardButton('How To Open', url='https://youtu.be/cTVJuad-hMU')
     ])
     try:
         await query.edit_message_reply_markup(
@@ -677,7 +677,7 @@ async def auto_filter(client, msg, spoll=False):
             [InlineKeyboardButton(text="🗓 1/1", callback_data="pages")]
              )   
     btn.insert(0, [
-        InlineKeyboardButton('How To Download', url='https://t.me/How_to_Open_Link_TG')
+        InlineKeyboardButton('How To Open', url='https://youtu.be/cTVJuad-hMU')
     ])    
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']
@@ -787,7 +787,7 @@ async def advantage_spell_chok(msg):
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
     dl= await msg.reply("I couldn't find anything related to that\nDid you mean any one of these?",
                     reply_markup=InlineKeyboardMarkup(btn))
-    await asyncio.sleep(60)
+    await asyncio.sleep(300)
     await k.delete()
 
 async def manual_filters(client, message, text=False):
