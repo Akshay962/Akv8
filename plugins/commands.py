@@ -244,7 +244,7 @@ async def start(client, message):
         chat_id=message.from_user.id,
         file_id=file_id,
         caption=f_caption,
-reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('Movie Save In Gallery', url='https://youtu.be/WUSusf8s2gM') ] ] ),
+reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('How To Save Movie In Gallery', url='https://youtu.be/WUSusf8s2gM') ] ] ),
         protect_content=True if pre == 'filep' else False,
         )
     await asyncio.sleep(600) 
