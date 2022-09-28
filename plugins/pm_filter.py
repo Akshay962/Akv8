@@ -135,12 +135,22 @@ async def advantage_spoll_choker(bot, query):
     if k == False:
         files, offset, total_results = await get_search_results(movie, offset=0, filter=True)
         if files:
-            k = (movie, files, offset, total_results)
+            kk = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('This Movie Not Found In DataBase')
-            await asyncio.sleep(10)
-            await k.delete()
+           k = await query.message.edit( 
+               text=(M_NT_FND),
+               reply_markup=InlineKeyboardMarkup(
+                                      [[
+                                        InlineKeyboardButton('💌 🄰🄳🄼🄸🄽 💌', url="https://t.me/Captain789bot"),
+                                                                         
+                                      ]]
+               ),
+               parse_mode='html'
+)
+
+           await asyncio.sleep(15)
+           await k.delete()
 
 
 @Client.on_callback_query()
