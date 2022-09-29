@@ -713,12 +713,12 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"IMDB_TEMPLATE2"
+        cap = f"<i><b>📟 Movie Name</b></i> : <i><b><a href={url}>{title}</a></b></i>\n <i><b>⭐ IMDB Rating</b></i> : <i><b><a href={url}/ratings>{rating}/10</a></b></i>\n <i><b>👩🏻‍💻 Requested By</b></i> : <i><b>{message.from_user.mention}</b></i>\n <i><b>🚀 Group</b></i> : <i><b>{message.chat.title}</b></i>\n\n <a href=https://www.instagram.com/akshaychand10>💠 𝙁𝙊𝙇𝙇𝙊𝙒 𝙈𝙀 𝙄𝙉𝙎𝙏𝘼𝙂𝙍𝘼𝙈 💠</a>"
     if imdb and imdb.get('poster'):
         try:
           a = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
                                       reply_markup=InlineKeyboardMarkup(btn))
-          await asyncio.sleep(120)
+          await asyncio.sleep(300)
           await message.delete()
           await a.delete()
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
