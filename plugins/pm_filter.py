@@ -617,7 +617,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup = InlineKeyboardMarkup(buttons)
             await query.message.edit_reply_markup(reply_markup)
     elif query.data == 'fp':
-        await query.answer("⚠️ Information ⚠️\n\nᴀꜰᴛᴇʀ 2 ᴍɪɴɪᴜᴛ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟy ᴅᴇʟᴇᴛᴇ\n\nIf you do not see the requested\n\nmovie / series file, look at the next page\n\n©Bot Owner and Admin", show_alert=True),
+        await query.answer("⚠️ Information ⚠️ \n\n 🤖 Bot is Not Open source project. ", show_alert=True),
     await query.answer('Piracy Is Crime')
 
 
