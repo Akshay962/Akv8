@@ -619,9 +619,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == 'fp':
         await query.answer(" is Not Open source project. ", show_alert=True),
     await query.answer('Piracy Is Crime')
-elif query.data == 'mov':
-        await query.answer("Movies Format ‼️\n\nPushpa ☑️\nPushpa Hindi ☑️\nPushpa Hindi dubbed movie ❎\n\nWeb Series ‼️\n\n Money Heist ☑️\nMoney Heist S01E07 ☑️\nMoney Heist All Season ❎", show_alert=True),
-   await query.answer('Piracy Is Crime') 
 
 async def auto_filter(client, msg, spoll=False):
     if not spoll:
