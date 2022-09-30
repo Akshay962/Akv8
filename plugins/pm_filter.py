@@ -731,14 +731,10 @@ async def auto_filter(client, msg, spoll=False):
             await message.reply_photo(photo=poster, caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
         except Exception as e:
             logger.exception(e)
-            await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
+            await message.reply_photo(photo="https://te.legra.ph/file/b0caab9e5a4f577842731.jpg", caption=cap, reply_markup=InlineKeyboardMarkup(btn))
     else:
        m = await message.reply_photo(photo="https://te.legra.ph/file/b0caab9e5a4f577842731.jpg", caption=cap, reply_markup=InlineKeyboardMarkup(btn))
-        await asyncio.sleep(300)
-        await fuk.delete()
-        await msg.delete()
-        await message.reply(f"<b>⚙️ {message.from_user.mention} Fɪʟᴛᴇʀ Fᴏʀ {search} Cʟᴏꜱᴇᴅ 🗑️</b>")
-    if spoll:
+        if spoll:
         await msg.message.delete()
 
 async def advantage_spell_chok(msg):
