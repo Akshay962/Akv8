@@ -65,7 +65,6 @@ async def save_group(bot, message):
                 photo="https://te.legra.ph/file/f760ea1ca9bfb8f595b0e.jpg", 
                 caption=f"<b>👋 Hi! {u.mention} \n\n✨, Welcome To Our Group {message.chat.title}. \n\nYou Can Find Movies / Series / Animes etc. From Here. Enjoy 😉.\n\n©️ Admin @Captain789bot\n\n🔎 How to Search Movies and WebSeries 👇</b>",
                 reply_markup=InlineKeyboardMarkup(zaute))
-                await asyncio.sleep(60)
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
 async def leave_a_chat(bot, message):
