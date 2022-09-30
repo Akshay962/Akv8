@@ -49,12 +49,11 @@ async def save_group(bot, message):
         if settings["welcome"]:
             for u in message.new_chat_members:
                 zaute = [[
-            InlineKeyboardButton('⚡️ Main Channel ⚡️', url="https://t.me/KCFilmss"),
-            InlineKeyboardButton('🔰 Main Group 🔰', url="https://t.me/KC_Films")
+            InlineKeyboardButton('⚡️ How to Search ⚡️', callback_data='mov')
         ],
         [
-            InlineKeyboardButton('⚜️ Backup Channel ⚜️', url="https://t.me/+7AyTKA_SqdsyNWNl"),
-            InlineKeyboardButton('🧲 Backup Group 🧲', url="https://t.me/KC_Filmz")
+            InlineKeyboardButton('⚜️ Channel ⚜️', url="https://t.me/+1qdEeHOTLdQ1M2Vl"),
+            InlineKeyboardButton('🧲 Group 🧲', url="https://t.me/+jZ79U7T7X2tlMjll")
         ]
         ]
                 if (temp.MELCOW).get('welcome') is not None:
@@ -63,7 +62,7 @@ async def save_group(bot, message):
                     except:
                         pass
                 temp.MELCOW['welcome'] = await message.reply_text(
-                text=f"<b>👋 Hi! {u.mention},✨, Welcome To Our Group {message.chat.title}. You Can Find Movies / Series / Animes etc. From Here. Enjoy 😉.</b>",disable_web_page_preview = True,
+                text=f"<b>👋 Hi! {u.mention} \n\n✨, Welcome To Our Group {message.chat.title}. \n\nYou Can Find Movies / Series / Animes etc. From Here. Enjoy 😉.\n\n©️ Admin @Captain789bot\n\n🔎 How to Search Movies and Web Series 👇</b>",disable_web_page_preview = True,
                 reply_markup=InlineKeyboardMarkup(zaute))
                 await asyncio.sleep(30)
                 await temp.MELCOW['welcome'].delete()
