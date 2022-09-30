@@ -441,7 +441,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "about":
         buttons = [[
             InlineKeyboardButton('🤖 Updates', url='https://t.me/AKBackup'),
-            InlineKeyboardButton('♥️ Source', callback_data='fp')
+            InlineKeyboardButton('♥️ Source', callback_data='source')
         ], [
             InlineKeyboardButton('🏠 Home', callback_data='start'),
             InlineKeyboardButton('🔐 Close', callback_data='close_data')
@@ -617,7 +617,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup = InlineKeyboardMarkup(buttons)
             await query.message.edit_reply_markup(reply_markup)
     elif query.data == 'fp':
-        await query.answer("Movies Format ‼️\n\nPushpa ☑️\nPushpa Hindi ☑️\nPushpa Hindi dubbed movie ❎\n\nWeb Series Format ‼️\n\n Money Heist ☑️\nMoney Heist S01E07 ☑️\nMoney Heist All Season ❎ ", show_alert=True),
+        await query.answer("Movies Format ‼️\n\nPushpa ✔️\nPushpa Hindi ✔️\nPushpa Hindi dubbed movie ❌\n\nWeb Series Format ‼️\n\nMoney Heist ✔️\nMoney Heist S01E07 ✔️\nMoney Heist All Season ❌ ", show_alert=True),
     await query.answer('Piracy Is Crime')
 
 async def auto_filter(client, msg, spoll=False):
