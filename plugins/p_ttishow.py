@@ -48,12 +48,25 @@ async def save_group(bot, message):
         settings = await get_settings(message.chat.id)
         if settings["welcome"]:
             for u in message.new_chat_members:
+                zaute = [[
+            InlineKeyboardButton('⚡️ Main Channel ⚡️', url="https://t.me/KCFilmss"),
+            InlineKeyboardButton('🔰 Main Group 🔰', url="https://t.me/KC_Films")
+        ],
+        [
+            InlineKeyboardButton('⚜️ Backup Channel ⚜️', url="https://t.me/+7AyTKA_SqdsyNWNl"),
+            InlineKeyboardButton('🧲 Backup Group 🧲', url="https://t.me/KC_Filmz")
+        ]
+        ]
                 if (temp.MELCOW).get('welcome') is not None:
                     try:
                         await (temp.MELCOW['welcome']).delete()
                     except:
                         pass
-                temp.MELCOW['welcome'] = await message.reply(f"<b>Hey , {u.mention}, Welcome to {message.chat.title}</b>")
+                temp.MELCOW['welcome'] = await message.reply_text(
+                text=f"<b>👋 Hi! {u.mention},✨, Welcome To Our Group {message.chat.title}. You Can Find Movies / Series / Animes etc. From Here. Enjoy 😉.</b>",disable_web_page_preview = True,
+                reply_markup=InlineKeyboardMarkup(zaute))
+                await asyncio.sleep(30)
+                await temp.MELCOW['welcome'].delete()
 
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
