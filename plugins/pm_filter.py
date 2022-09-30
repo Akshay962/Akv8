@@ -138,8 +138,8 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('This Movie Not Found In DataBase')
-            await asyncio.sleep(10)
+            k = await query.message.edit('⭕This Movie Not Found In DataBase\n\n⭕ Not Release OTT\n\n⭕ Not Add My Database\n\n⭕ Request To Admin: <a href=http://t.me/Captain789bot>✪ 𝗖𝗮𝗽𝘁𝗮𝗶𝗻 ✪</a>')
+            await asyncio.sleep(50)
             await k.delete()
 
 @Client.on_callback_query()
@@ -790,7 +790,7 @@ async def advantage_spell_chok(msg):
         )
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    m = await msg.reply_photo(photo="https://te.legra.ph/file/7dd82cffee9fe6671ac61.jpg", caption=f"Hey 👋, {msg.from_user.mention}! \n\nI couldn't find anything related to that\n\nDid you mean any one of these?",
+    m = await msg.reply_photo(photo="https://te.legra.ph/file/7dd82cffee9fe6671ac61.jpg", caption=f"𝐇𝐞𝐲 👋, {msg.from_user.mention}! \n\n𝐒𝐄𝐋𝐄𝐂𝐓 𝐘𝐎𝐔𝐑 𝐌𝐎𝐕𝐈𝐄 𝐂𝐋𝐈𝐂𝐊 𝐎𝐍 𝐌𝐎𝐕𝐈𝐄 𝐍𝐀𝐌𝐄  👇👇👇",
                     reply_markup=InlineKeyboardMarkup(btn))
     await asyncio.sleep(60)
     await m.delete()
