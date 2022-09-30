@@ -138,16 +138,35 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('This Movie Not Found In DataBase')
-            await asyncio.sleep(10)
-            await k.delete()
-               reply_markup=InlineKeyboardMarkup(
-                                      [[
-                                        InlineKeyboardButton('💌 🄰🄳🄼🄸🄽 💌', url="https://t.me/Akanksha695"),
-                                                                         
-                                      ]]
-              
-
+            k = (movie, files, offset, total_results)
+            await auto_filter(bot, query, k)
+        else:
+            await query.message.edit_text(
+            text="▬▬ ▭▭ ▭▭  ▭▭ ▭▭ ▭▭\nSEARCHING... 10/100%\n▬▬ ▭▭ ▭▭  ▭▭ ▭▭ ▭▭"
+        )
+        await query.message.edit_text(
+            text="▬▬ ▬▬ ▬▬  ▭▭ ▭▭ ▭▭\nSEARCHING... 25/100%\n▬▬ ▬▬ ▬▬  ▭▭ ▭▭ ▭▭"
+        )
+        await query.message.edit_text(
+            text="▬▬ ▬▬ ▬▬  ▬▬ ▬▬ ▭▭\nSEARCHING... 75/100%\n▬▬ ▬▬ ▬▬  ▬▬ ▬▬ ▭▭"
+        )
+        await query.message.edit_text(
+            text="▬▬ ▬▬ ▬▬  ▬▬ ▬▬ ▬▬\nSEARCHING... 100/100%\n▬▬ ▬▬ ▬▬  ▬▬ ▬▬ ▬▬"
+        )
+        await query.message.reply_text(
+            text=f"🧸Hey 👋 {query.from_user.mention} dear 🥰, This Movie is not released or not added in my database\nRequest to Admin Will be add in 24h 👇",
+        reply_markup=InlineKeyboardMarkup(
+            [
+             
+                [
+                    InlineKeyboardButton(
+                        text="💌 🄰🄳🄼🄸🄽 💌", url=f"http://t.me/Akanksha789_bot/"
+                    )
+                ],
+                
+            ]
+        )
+    )
 
 @Client.on_callback_query()
 async def cb_handler(client: Client, query: CallbackQuery):
