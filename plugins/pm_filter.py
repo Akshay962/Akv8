@@ -617,7 +617,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup = InlineKeyboardMarkup(buttons)
             await query.message.edit_reply_markup(reply_markup)
     elif query.data == 'fp':
-        await query.answer("☀️  Search With Correct Spelling..\n\n☀️ Try to Search movie With  Year If The bot is Not Sending You Accurate Result..\n\n☀️ Search Movies  in The Given From Example:👇\n\nMovies Format ‼️\n\nPushpa ✔️\nPushpa Hindi ✔️\nPushpa Hindi dubbed movie ❌\n\nWeb Series Format ‼️\n\nMoney Heist ✔️\nMoney Heist S01E07 ✔️\nMoney Heist All Season ❌ ", show_alert=True),
+        await query.answer("☀️ Search With Correct Spelling..\n\nMovies Format ‼️\n\nPushpa ✔️\nPushpa Hindi ✔️\nPushpa Hindi dubbed movie ❌\n\nWeb Series Format ‼️\n\nMoney Heist ✔️\nMoney Heist S01E07 ✔️\nMoney Heist All Season ❌ ", show_alert=True),
     await query.answer('Piracy Is Crime')
 
 async def auto_filter(client, msg, spoll=False):
