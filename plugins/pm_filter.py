@@ -733,7 +733,7 @@ async def auto_filter(client, msg, spoll=False):
             logger.exception(e)
             await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
     else:
-        fmsg = await message.reply_photo(photo="https://te.legra.ph/file/b0caab9e5a4f577842731.jpg", caption=cap, reply_markup=InlineKeyboardMarkup(btn)),
+        fmsg = await message.reply_photo(photo="https://te.legra.ph/file/7dd82cffee9fe6671ac61.jpg", caption=cap, reply_markup=InlineKeyboardMarkup(btn)),
     
     await asyncio.sleep(300)
     await fmsg.delete()
