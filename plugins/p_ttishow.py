@@ -49,7 +49,7 @@ async def save_group(bot, message):
         if settings["welcome"]:
             for u in message.new_chat_members:
                 zaute = [[
-            InlineKeyboardButton('⚡️ How to Search ⚡️', callback_data='mov')
+            InlineKeyboardButton('⚡️ How to Search ⚡️', callback_data='fp')
         ],
         [
             InlineKeyboardButton('⚜️ Channel ⚜️', url="https://t.me/+1qdEeHOTLdQ1M2Vl"),
