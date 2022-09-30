@@ -733,13 +733,14 @@ async def auto_filter(client, msg, spoll=False):
             logger.exception(e)
             await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
     else:
-        m=await message.reply_sticker("CAACAgUAAxkBAAIIzWK9wmZSiQN5wYLauCvQtC7a1O0rAAITCAACp9HIVA6oKX23md8bHgQ")
+       m=await message.reply_sticker("CAACAgUAAxkBAAIIzWK9wmZSiQN5wYLauCvQtC7a1O0rAAITCAACp9HIVA6oKX23md8bHgQ")
         await asyncio.sleep(1)
         await m.delete()
         fuk = await message.reply_photo(photo="https://te.legra.ph/file/b0caab9e5a4f577842731.jpg", caption=cap, reply_markup=InlineKeyboardMarkup(btn))
-        await asyncio.sleep(20)
+        await asyncio.sleep(300)
         await fuk.delete()
         await msg.delete()
+    if spoll:
         await msg.message.delete()
 
 async def advantage_spell_chok(msg):
