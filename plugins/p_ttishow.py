@@ -61,8 +61,9 @@ async def save_group(bot, message):
                         await (temp.MELCOW['welcome']).delete()
                     except:
                         pass
-                temp.MELCOW['welcome'] = await message.reply_text(
-                text=f"<b>👋 Hi! {u.mention} \n\n✨, Welcome To Our Group {message.chat.title}. \n\nYou Can Find Movies / Series / Animes etc. From Here. Enjoy 😉.\n\n©️ Admin @Captain789bot\n\n🔎 How to Search Movies and Web Series 👇</b>",disable_web_page_preview = True,
+                temp.MELCOW['welcome'] = await message.reply_photo(  
+                                                 photo="https://te.legra.ph/file/f760ea1ca9bfb8f595b0e.jpg",                                               
+                                                 caption=f"<b>👋 Hi! {u.mention} \n\n✨, Welcome To Our Group {message.chat.title}. \n\nYou Can Find Movies / Series / Animes etc. From Here. Enjoy 😉.\n\n©️ Admin @Captain789bot\n\n🔎 How to Search Movies and WebSeries 👇</b>",disable_web_page_preview = True,
                 reply_markup=InlineKeyboardMarkup(zaute))
                 await asyncio.sleep(30)
                 await temp.MELCOW['welcome'].delete()
